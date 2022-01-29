@@ -6,7 +6,7 @@
 /*   By: a1 <a1@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/27 12:24:39 by bclarind          #+#    #+#             */
-/*   Updated: 2022/01/29 18:35:11 by a1               ###   ########.fr       */
+/*   Updated: 2022/01/29 20:06:29 by a1               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,7 +96,7 @@ int	main(int argc, char **argv)
 	if (duplicates_in_stack(a))
 		return (free_stack(a));
 	main_logic(&a, &b, &operations, buf);
-	if (final_sort(a) && !(b))
+	if (final_sort(a) && !b)
 		return (print_result(1));
 	return (print_result(0));
 }

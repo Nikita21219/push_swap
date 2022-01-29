@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   error_operations.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bclarind <bclarind@student.42.fr>          +#+  +:+       +#+        */
+/*   By: a1 <a1@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/27 16:15:34 by bclarind          #+#    #+#             */
-/*   Updated: 2022/01/27 19:30:56 by bclarind         ###   ########.fr       */
+/*   Updated: 2022/01/29 19:38:33 by a1               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,8 +62,6 @@ void	check_operation(char **buf)
 		*buf += 3;
 	else if (!ft_strncmp(*buf, "sa\n", 3))
 		*buf += 3;
-	else if (!ft_strncmp(*buf, "rr\n", 3))
-		*buf += 3;
 	else if (!ft_strncmp(*buf, "ra\n", 3))
 		*buf += 3;
 	else if (!ft_strncmp(*buf, "rb\n", 3))
@@ -74,6 +72,8 @@ void	check_operation(char **buf)
 		*buf += 4;
 	else if (!ft_strncmp(*buf, "rrb\n", 4))
 		*buf += 4;
+	else if (!ft_strncmp(*buf, "rr\n", 3))
+		*buf += 3;
 }
 
 char	*error_operations(void)
