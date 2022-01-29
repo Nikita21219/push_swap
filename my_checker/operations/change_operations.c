@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   change_operations.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bclarind <bclarind@student.42.fr>          +#+  +:+       +#+        */
+/*   By: a1 <a1@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 12:16:11 by a1                #+#    #+#             */
-/*   Updated: 2022/01/27 16:19:56 by bclarind         ###   ########.fr       */
+/*   Updated: 2022/01/29 18:34:50 by a1               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,4 +105,15 @@ void	change_operations(t_data **operations)
 		if (is_continue_ss(cur))
 			continue ;
 	}
+}
+
+int	final_sort(t_data *stack)
+{
+	while (stack->next)
+	{
+		if (stack->val > stack->next->val)
+			return (0);
+		stack = stack->next;
+	}
+	return (1);
 }
